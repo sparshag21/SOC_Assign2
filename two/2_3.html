@@ -67,21 +67,6 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script>
-    // const search = () => {
-    //     let td;
-    //     const input = document.getElementsByTagName("input")[0];
-    //     const searchString = input.value;
-    //     let tr = document.getElementsByTagName("tr");
-    //     for (i = 1; i < tr.length; i++) {
-    //         td = tr[i].getElementsByTagName("td")[1];
-    //         if (td) {
-    //             if (td.innerText.toLowerCase().includes(searchString.toLowerCase()))
-    //                 tr[i].style.display = "";
-    //             else
-    //                 tr[i].style.display = "none";
-    //         }
-    //     }
-    // }
     $(document).ready(function () {
         $("#myInput").on("keyup", function () {
             var value = $(this).val().toLowerCase();
