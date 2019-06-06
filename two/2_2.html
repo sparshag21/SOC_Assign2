@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div align="center">
+        <input type="text" placeholder="Search by name">
+        <button onclick="search()">Search</button>
+    </div><br><br>
+    <div>
+        <TABLE BORDER="5" align="center">
+            <TR>
+                <TH COLSPAN="3">
+                    <H3 style="text-align: center"><BR>SoC Data</H3>
+                </TH>
+            </TR>
+            <TH>Roll No</TH>
+            <TH>Name</TH>
+            <TH>Year</TH>
+            <TR>
+                <TD>180783</TD>
+                <TD>Sparsh Agarwal</TD>
+                <TD>First</TD>
+            </TR>
+            <TR>
+                <TD>180001</TD>
+                <TD>Aabhas Rai</TD>
+                <TD>First</TD>
+            </TR>
+            <TR>
+                <TD>180340</TD>
+                <TD>Karan Singh</TD>
+                <TD>First</TD>
+            </TR>
+            <TR>
+                <TD>180898</TD>
+                <TD>Yuvraj Gagneja</TD>
+                <TD>First</TD>
+            </TR>
+            <TR>
+                <TD>180120</TD>
+                <TD>Ansula Vagisha</TD>
+                <TD>First</TD>
+            </TR>
+            <TR>
+                <TD>180500</TD>
+                <TD>Parag Gupta</TD>
+                <TD>First</TD>
+            </TR>
+        </TABLE>
+    </div>
+
+</body>
+<script>
+    const search = () => {
+        let td;
+        const input = document.getElementsByTagName("input")[0];
+        const searchString = input.value;
+        let tr = document.getElementsByTagName("tr");
+        for (i = 1; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+                if (td.innerText.toLowerCase().includes(searchString.toLowerCase()))
+                    tr[i].style.display = "";
+                else
+                    tr[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</html>
